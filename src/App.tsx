@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useEffect } from 'react';
+import  {  useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Toaster } from 'react-hot-toast';

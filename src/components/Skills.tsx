@@ -5,81 +5,78 @@ import { Cloud, Database, Globe, Cpu, Palette, Zap } from 'lucide-react';
 const Skills: React.FC = () => {
   const skillCategories = [
     {
-        title: "Frontend Development",
-        icon: Globe,
-        color: "from-purple-500 to-pink-500",
-        skills: [
-          { name: "React.js", level: 90 },
-          { name: "Next.js", level: 70 },
-          { name: "JavaScript", level: 90 },
-          { name: "TypeScript", level: 85 },
-          { name: "HTML", level: 95 },
-          { name: "CSS", level: 95 },
-          { name: "JSON", level: 90 }
-        ]
-      },
-      {
-        title: "Backend Development",
-        icon: Database,
-        color: "from-purple-500 to-pink-500",
-        skills: [
-          { name: "Java", level: 90 },
-          { name: "Python", level: 90 },
-          { name: "Node.js", level: 85 },
-          { name: "Spring Boot", level: 80 },
-          { name: "REST APIs", level: 90 },
-          { name: "Microservices", level: 85 },
-          { name: "SQL", level: 85 },
-          { name: "C", level: 70 },
-          { name: "C++", level: 70 }
-        ]
-      },
-      {
-        title: "Cloud & DevOps",
-        icon: Cloud,
-        color: "from-purple-500 to-pink-500",
-        skills: [
-          { name: "AWS", level: 75 },
-          { name: "Azure", level: 65 },
-          { name: "Docker", level: 80 },
-          { name: "Jenkins", level: 75 },
-          { name: "Git", level: 92 },
-          { name: "GitHub Actions", level: 78 },
-          { name: "Kubernetes", level: 65 },
-          { name: "Terraform", level: 70 },
-          { name: "CI/CD", level: 85 },
-          { name: "Agile", level: 85 }
-        ]
-      },
-      {
-        title: "MLOps & Data",
-        icon: Cpu,
-        color: "from-purple-500 to-pink-500",
-        skills: [
-          { name: "MLflow", level: 80 },
-          { name: "Pandas", level: 90 },
-          { name: "OpenAI APIs", level: 80 },
-          { name: "LangChain", level: 75 },
-          { name: "Generative AI", level: 75 },
-          { name: "Oracle", level: 75 },
-          { name: "MySQL", level: 78 },
-          { name: "PostgreSQL", level: 80 },
-          { name: "MongoDB", level: 75 },
-          { name: "Firebase", level: 70 }
-        ]
-      },
-      {
-        title: "Other",
-        icon: Zap,
-        color: "from-purple-500 to-pink-500",
-        skills: [
-          { name: "Prometheus", level: 50},
-          { name: "Grafana", level: 50 },
-          { name: "RabbitMQ (Pub/Sub)", level: 65 },
-          { name: "Kafka", level: 60 }
-        ]
-      }
-          
+      title: "Programming Skills",
+      icon: Globe,
+      color: "from-purple-500 to-pink-500",
+      skills: [
+        { name: "Python", level: 90 },
+        { name: "C/C++", level: 80 },
+        { name: "Java", level: 85 },
+        { name: "HTML", level: 95 },
+        { name: "CSS", level: 90 },
+        { name: "JavaScript", level: 88 },
+        { name: "TypeScript", level: 80 },
+        { name: "SQL", level: 85 }
+      ]
+    },
+    {
+      title: "Libraries & Frameworks",
+      icon: Cpu,
+      color: "from-purple-500 to-pink-500",
+      skills: [
+        { name: "Angular", level: 75 },
+        { name: "React.js", level: 85 },
+        { name: "Next.js", level: 70 },
+        { name: "Spring Boot", level: 80 },
+        { name: "FastAPI", level: 75 },
+        { name: "Flask", level: 75 },
+        { name: "OpenCV", level: 70 },
+        { name: "Pandas", level: 85 }
+      ]
+    },
+    {
+      title: "Cloud & DevOps",
+      icon: Cloud,
+      color: "from-purple-500 to-pink-500",
+      skills: [
+        { name: "AWS EC2", level: 75 },
+        { name: "AWS Amplify", level: 70 },
+        { name: "AWS Cognito", level: 70 },
+        { name: "GCP", level: 70 },
+        { name: "CI/CD Pipelines", level: 80 },
+        { name: "Docker (Learning)", level: 50 },
+        { name: "Git", level: 90 },
+        { name: "Agile Development", level: 85 }
+      ]
+    },
+    {
+      title: "Data & AI",
+      icon: Zap,
+      color: "from-purple-500 to-pink-500",
+      skills: [
+        { name: "OpenAI APIs", level: 80 },
+        { name: "MLflow", level: 75 },
+        { name: "XGBoost", level: 70 },
+        { name: "LangChain", level: 70 },
+        { name: "Machine Learning", level: 80 },
+        { name: "RAG Systems", level: 65 }
+      ]
+    },
+    {
+      title: "Databases & Tools",
+      icon: Database,
+      color: "from-purple-500 to-pink-500",
+      skills: [
+        { name: "PostgreSQL", level: 80 },
+        { name: "Firebase", level: 70 },
+        { name: "Neo4j", level: 65 },
+        { name: "Tableau", level: 75 },
+        { name: "Streamlit", level: 70 },
+        { name: "Postman", level: 80 },
+        { name: "VS Code", level: 90 },
+        { name: "Confluence", level: 75 }
+      ]
+    }
   ];
 
   const softSkills = [

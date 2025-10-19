@@ -8,22 +8,22 @@ const About: React.FC = () => {
     {
       icon: GraduationCap,
       title: "Education",
-      description: "Master's in Computer Science @ Northwest Missouri State University, Maryville, MO, USA"
+      description: "MS in Computer Science (GPA: 4.0/4.0) from Northwest Missouri State University, Maryville, MO | B.Tech in CS (GPA: 3.6/4.0) from JNTU, Hyderabad, India"
     },
     {
       icon: Award,
       title: "Experience",
-      description: "Hands-on experience in full-stack development and system optimization"
+      description: "3 years of full-stack development across fintech, healthcare, and e-commerce with expertise in building scalable systems"
     },
     {
       icon: Target,
-      title: "Goals",
-      description: "My goal is to build impactful software solutions that serve and empower a wide range of users, solving real-world problems at scale."
+      title: "Specialization",
+      description: "Backend systems, AI/ML integration, cloud architecture (AWS), and building low-latency APIs with 99% uptime"
     },
     {
       icon: Heart,
       title: "Interests",
-      description: "Software development, AI Agents, MLOps, web development, Android development"
+      description: "AI-assisted development, RAG systems, microservices architecture, and leveraging Cursor/Claude Code for rapid iteration"
     }
   ];
 
@@ -48,8 +48,9 @@ const About: React.FC = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate software developer with a strong foundation in computer science 
-            and a keen interest in leveraging technology to create meaningful solutions.
+            Software Engineer with 3 years of experience building backend and full-stack systems across fintech, healthcare, and e-commerce. 
+            Skilled in Python, Java, TypeScript, React, SQL/NoSQL, and AWS, with a proven ability to deliver low-latency APIs (&lt;200ms), 
+            improve system uptime to 99%, and create scalable pipelines and web applications.
           </p>
         </motion.div>
 
@@ -62,22 +63,23 @@ const About: React.FC = () => {
           >
             <h3 className="text-3xl font-bold text-white mb-6">My Journey</h3>
             <p className="text-gray-300 leading-relaxed">
-            With a strong background in computer science and experience across startups and enterprise systems, I’m passionate about building technology
-            that creates real impact. At LTIMindtree, I developed backend automation workflows to streamline financial data processing for enterprise reporting. 
-            At SellMate.AI, I led full-stack development of AI-powered tools for e-commerce.At Mindly Care, I contributed to refining multi-role workflows, 
-            enhancing UI consistency, and improving the overall user experience across the platform.
-            
+            Currently working as a Founding Engineer at a stealth startup, where I'm building scalable React/Node/AWS systems 
+            and implementing AI-powered RAG pipelines that deliver sub-second responses. My journey has taken me through 
+            diverse environments—from enterprise systems at LTIMindtree to fast-paced startups like SellMate.AI and Mindly Care.
             </p>
             
             <p className="text-gray-300 leading-relaxed">
-            As a graduate assistant, I mentored over 60 students in Android development, conducting code reviews, teaching modular design principles, 
-            and introducing CI/CD best practices to strengthen their skills as Android developers.
+            At LTIMindtree, I built Python pipelines and PostgreSQL schemas that automated financial data processing for 
+            enterprise clients. At SellMate.AI, I developed AI-powered tools using OpenAI APIs and Next.js that reduced 
+            manual seller effort by 40%. At Mindly Care, I created secure backend systems with Firebase and standardized 
+            UI components across multiple workflows.
             </p>
+            
             <p className="text-gray-300 leading-relaxed">
-            I approach every project, whether it's a solo prototype or a team-driven sprint with enthusiasm, creativity, and 
-            attention to detail. I'm always exploring new technologies, contributing to open-source, and collaborating with 
-            people who share a passion for impactful, user-centric solutions. For me, software is more than just code, it's a 
-            way to connect, empower, and keep pushing the boundaries of what's possible.
+            I'm passionate about leveraging modern dev tools like Cursor, Claude Code, and AI-assisted development to iterate 
+            quickly and deliver reliable features. Whether it's optimizing API performance to &lt;200ms or building systems 
+            with 99% uptime, I focus on creating solutions that make a real impact. I thrive in collaborative environments 
+            where I can ship features fast, debug thoughtfully, and continuously push the boundaries of what's possible.
             </p>
           </motion.div>
 

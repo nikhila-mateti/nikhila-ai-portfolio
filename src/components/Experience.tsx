@@ -12,26 +12,37 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    company: "Mindly Care",
-    role: "Full Stack Engineer Intern (Startup)",
-    location: "Fremont, CA",
-    period: "May 2025 - Present",
+    company: "Stealth Startup",
+    role: "Founding Engineer (Part Time)",
+    location: "San Francisco, CA",
+    period: "Jul 2025 – Present",
     description: [
-      "Architected secure backend system using Node.js and Firebase Functions, enabling real-time user profile verification for 500+ registered users with 99.8% uptime.",
-      "Delivered responsive landing page redesign resulting in 25% increase in user engagement and 40% improvement in mobile responsiveness across all device types.",
-      "Implemented secure authentication system using AWS Cognito for sign-in/sign-up workflows, achieving 99.5% authentication success rate and enhancing user security with multi-factor authentication.",
-      "Standardized UI component library across 5+ critical user workflows, achieving 40% improvement in platform-wide visual consistency and reducing development time by 30%."
+      "Designed and implemented a React/Node/AWS Cognito MVP achieving <1s response times and 99% uptime, making the platform ready for pilot users and internal testing.",
+      "Built an AI-powered RAG pipeline (LangChain + OpenAI + DynamoDB/S3) that delivered sub-second responses across 1K+ documents, improving knowledge retrieval for demos and early product validation.",
+      "Collaborated with product and design teams under tight deadlines, accelerating MVP delivery and positioning the platform for adoption."
+    ]
+  },
+  {
+    company: "Mindly Care",
+    role: "Software Engineer Intern (Part Time)",
+    location: "Fremont, CA",
+    period: "May 2025 – Aug 2025",
+    description: [
+      "Built a secure Node.js + Firebase backend endpoint for profile retrieval/decryption from Vault, enabling dynamic UI flows and reducing data errors by 40%.",
+      "Designed & deployed responsive React landing pages, boosting engagement by 25% and cutting bounce rate by 30%.",
+      "Standardized shared UI components (profile images, buttons, navigation) across 5+ workflows, improving visual consistency by 40%."
     ]
   },
   {
     company: "SellMate.AI",
-    role: "Software Engineer – Full Stack Developer (Startup)",
+    role: "Software Engineer (Full-Stack Developer)",
     location: "San Francisco, CA",
     period: "Jun 2024 – Aug 2024",
     description: [
-      "Built AI-powered product description generator using OpenAI APIs, reducing manual content creation effort by 40% and accelerating product listing time by 30% for 200+ active sellers.",
-      "Engineered robust authentication system with Clerk & Next.js, achieving 98% login success rate & reducing authentication-related support tickets by 50%.",
-      "Developed eBay marketplace integration enabling seamless product uploads, increasing seller efficiency by 35% & reducing manual listing steps by 3x."
+      "Developed an AI-powered product description generator with Next.js + OpenAI, reducing manual seller effort by 40% and accelerating listing speed by 30%.",
+      "Implemented Clerk + Next.js auth, increasing login success rate to 98% & cutting auth-related errors by 50%.",
+      "Built and deployed APIs to enable direct eBay product uploads, increasing seller efficiency by 35% and reducing listing steps by 3x.",
+      "Optimized API performance to serve eBay listings in <200ms, improving UI responsiveness by 45%."
     ]
   },
   {
@@ -50,9 +61,9 @@ const experiences: ExperienceItem[] = [
     location: "Hyderabad, India",
     period: "Aug 2021 – Jul 2023",
     description: [
-      "Automated financial data processing pipeline using Python, transforming Excel datasets into validated CSV files for Bread Financial, reducing manual processing time by 30% and cutting report errors by 25%.",
-      "Designed PostgreSQL database schemas supporting multi-departmental financial reporting for enterprise client, enabling faster data retrieval and cross-team analytics for 50+ stakeholders.",
-      "Deployed scalable backend solutions on AWS EC2 with CI/CD integration, processing 10,000+ records per execution while reducing support escalations by 20% and improving system reliability by 35%."
+      "Built and deployed Python pipelines to transform Excel datasets into validated CSVs for Bread Financial's reporting platform, reducing manual processing time by 30% and report errors by 25%.",
+      "Designed PostgreSQL schemas and optimized SQL queries, enabling faster cross-team reporting and analytics.",
+      "Modularized backend scripts, integrated them into CI/CD pipelines, and deployed on AWS EC2, improving reliability while reducing support escalations by 20% and processing 10K+ records per execution."
     ]
   }
 ];

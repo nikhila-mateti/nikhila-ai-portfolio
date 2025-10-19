@@ -5,33 +5,32 @@ import { Cloud, Database, Globe, Cpu, Palette, Zap } from 'lucide-react';
 const Skills: React.FC = () => {
   const skillCategories = [
     {
-      title: "Programming Skills",
+      title: "Programming Languages",
       icon: Globe,
       color: "from-purple-500 to-pink-500",
       skills: [
         { name: "Python", level: 90 },
-        { name: "C/C++", level: 80 },
         { name: "Java", level: 85 },
-        { name: "HTML", level: 95 },
-        { name: "CSS", level: 90 },
         { name: "JavaScript", level: 88 },
-        { name: "TypeScript", level: 80 },
-        { name: "SQL", level: 85 }
+        { name: "TypeScript", level: 85 },
+        { name: "SQL", level: 85 },
+        { name: "HTML", level: 95 },
+        { name: "CSS", level: 90 }
       ]
     },
     {
-      title: "Libraries & Frameworks",
+      title: "Frameworks & Tools",
       icon: Cpu,
       color: "from-purple-500 to-pink-500",
       skills: [
-        { name: "Angular", level: 75 },
-        { name: "React.js", level: 85 },
-        { name: "Next.js", level: 70 },
-        { name: "Spring Boot", level: 80 },
+        { name: "Spring Boot", level: 85 },
+        { name: "React", level: 90 },
+        { name: "Next.js", level: 85 },
+        { name: "Node.js", level: 80 },
+        { name: "Express", level: 80 },
+        { name: "TailwindCSS", level: 85 },
         { name: "FastAPI", level: 75 },
-        { name: "Flask", level: 75 },
-        { name: "OpenCV", level: 70 },
-        { name: "Pandas", level: 85 }
+        { name: "Firebase", level: 80 }
       ]
     },
     {
@@ -39,42 +38,43 @@ const Skills: React.FC = () => {
       icon: Cloud,
       color: "from-purple-500 to-pink-500",
       skills: [
-        { name: "AWS EC2", level: 75 },
-        { name: "AWS Amplify", level: 70 },
-        { name: "AWS Cognito", level: 70 },
-        { name: "GCP", level: 70 },
-        { name: "CI/CD Pipelines", level: 80 },
-        { name: "Docker (Learning)", level: 50 },
-        { name: "Git", level: 90 },
-        { name: "Agile Development", level: 85 }
+        { name: "AWS EC2", level: 85 },
+        { name: "AWS S3", level: 80 },
+        { name: "AWS DynamoDB", level: 75 },
+        { name: "AWS Cognito", level: 80 },
+        { name: "AWS Amplify", level: 75 },
+        { name: "Docker", level: 70 },
+        { name: "GitHub Actions", level: 80 },
+        { name: "Jenkins", level: 75 },
+        { name: "CI/CD Pipelines", level: 85 }
       ]
     },
     {
-      title: "Data & AI",
+      title: "AI/Dev Tools",
       icon: Zap,
       color: "from-purple-500 to-pink-500",
       skills: [
-        { name: "OpenAI APIs", level: 80 },
+        { name: "Cursor", level: 85 },
+        { name: "Claude Code", level: 85 },
+        { name: "OpenAI APIs", level: 85 },
+        { name: "LangChain", level: 80 },
         { name: "MLflow", level: 75 },
-        { name: "XGBoost", level: 70 },
-        { name: "LangChain", level: 70 },
-        { name: "Machine Learning", level: 80 },
-        { name: "RAG Systems", level: 65 }
+        { name: "RAG Systems", level: 80 }
       ]
     },
     {
-      title: "Databases & Tools",
+      title: "Databases & Architecture",
       icon: Database,
       color: "from-purple-500 to-pink-500",
       skills: [
-        { name: "PostgreSQL", level: 80 },
-        { name: "Firebase", level: 70 },
-        { name: "Neo4j", level: 65 },
-        { name: "Tableau", level: 75 },
-        { name: "Streamlit", level: 70 },
-        { name: "Postman", level: 80 },
-        { name: "VS Code", level: 90 },
-        { name: "Confluence", level: 75 }
+        { name: "PostgreSQL", level: 85 },
+        { name: "DynamoDB", level: 80 },
+        { name: "Firebase", level: 80 },
+        { name: "MS SQL", level: 75 },
+        { name: "Neo4j", level: 70 },
+        { name: "REST APIs", level: 90 },
+        { name: "GraphQL", level: 75 },
+        { name: "Microservices", level: 80 }
       ]
     }
   ];
@@ -82,10 +82,10 @@ const Skills: React.FC = () => {
   const softSkills = [
     "Problem Solving",
     "Team Collaboration",
-    "Communication",
-    "Project Management",
-    "Critical Thinking",
-    "Adaptability"
+    "Agile/Scrum",
+    "Unit Testing",
+    "API Design",
+    "System Architecture"
   ];
 
   return (

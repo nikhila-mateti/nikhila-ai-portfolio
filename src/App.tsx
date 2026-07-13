@@ -1,109 +1,73 @@
-import  {  useState, useEffect } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Toaster } from 'react-hot-toast';
+import { useEffect, useState } from 'react';
 import Hero from './components/Hero';
-import About from './components/About';
-import Projects from './components/Projects';
+import Education from './components/Education';
 import Skills from './components/Skills';
-import Contact from './components/Contact';
 import Experience from './components/Experience';
-import Navigation from './components/Navigation';
-import LoadingScreen from './components/LoadingScreen';
-import Screen3D from './components/Screen3D';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
 
-export type Section = 'hero' | 'about' | 'projects' | 'skills' | 'contact' | 'experience';
+const navItems = [
+  { href: '#education', label: 'Education' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#contact', label: 'Contact' },
+];
 
 function App() {
-  const [currentSection, setCurrentSection] = useState<Section>('hero');
-  const [isLoading, setIsLoading] = useState(true);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll('section[id]');
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
-
-      sections.forEach((section) => {
-        const sectionElement = section as HTMLElement;
-        const sectionTop = sectionElement.offsetTop;
-        const sectionBottom = sectionTop + sectionElement.offsetHeight;
-        
-        if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
-          setCurrentSection(section.id as Section);
-        }
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    // Initial check
-    handleScroll();
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black to-indigo-900 text-white overflow-x-hidden relative">
-      <Toaster 
-        position="top-center"
-        reverseOrder={false}
-        toastOptions={{
-          style: {
-            background: '#363636',
-            color: '#fff',
-          },
-          success: {
-            duration: 3000,
-          },
-        }}
-      />
-      <AnimatePresence mode="wait">
-        {isLoading ? (
-          <LoadingScreen key="loading" onComplete={() => setIsLoading(false)} />
-        ) : (
-          <motion.div
-            key="content"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="fixed inset-0 z-0">
-              <Canvas>
-                <Screen3D currentSection={currentSection} />
-              </Canvas>
-            </div>
+    <div className="min-h-screen bg-eggshell text-obsidian">
+      <nav
+        className={`sticky top-0 z-30 border-b transition-colors duration-200 ${
+          scrolled ? 'border-chalk bg-eggshell/90 backdrop-blur-md' : 'border-transparent bg-eggshell'
+        }`}
+      >
+        <div className="pf-container flex h-14 items-center justify-between">
+          <a href="#top" className="pf-mono text-[13px] tracking-wide text-obsidian no-underline">
+            NM
+          </a>
+          <div className="hidden items-center gap-5 sm:flex">
+            {navItems.map((item) => (
+              <a key={item.href} href={item.href} className="pf-link text-[13px]">
+                {item.label}
+              </a>
+            ))}
+          </div>
+          <a href="/Nikhila_Mateti_Resume.pdf" download className="pf-pill-ghost text-[13px]">
+            Resume
+          </a>
+        </div>
+      </nav>
 
-            <Navigation currentSection={currentSection} onSectionChange={setCurrentSection} />
-
-            <main className="relative z-10">
-              <section id="hero">
-                <Hero onNavigate={setCurrentSection} />
-              </section>
-
-              <div className="md:pl-28 lg:pl-32">
-                <section id="about">
-                  <About />
-                </section>
-                <section id="experience">
-                  <Experience />
-                </section>
-                <section id="projects">
-                  <Projects />
-                </section>
-                <section id="skills">
-                  <Skills />
-                </section>
-                
-                <section id="contact">
-                  <Contact />
-                </section>
-              </div>
-            </main>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <main id="top">
+        <Hero />
+        <div className="pf-container">
+          <div className="pf-rule" />
+        </div>
+        <Education />
+        <div className="pf-container">
+          <div className="pf-rule" />
+        </div>
+        <Skills />
+        <div className="pf-container">
+          <div className="pf-rule" />
+        </div>
+        <Experience />
+        <div className="pf-container">
+          <div className="pf-rule" />
+        </div>
+        <Projects />
+        <Footer />
+      </main>
     </div>
   );
 }

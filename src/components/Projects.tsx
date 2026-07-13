@@ -1,202 +1,82 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-    Github, 
-    MessageSquare, 
-    Server, 
-    Gamepad, 
-    Plane, 
-    Eye } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { projects } from '../data/profile';
 
-const Projects: React.FC = () => {
-  const projects = [
-    
-      {
-        title: "InterviewBot",
-        description: "RAG-powered chatbot combining Neo4j, LangChain, and LlamaIndex to deliver context-aware answers from graph databases using natural language.",
-        tech: ["Python", "Neo4j", "LlamaIndex", "LangChain", "OpenAI GPT"],
-        icon: MessageSquare,
-        color: "from-purple-500 to-pink-500",
-        githubUrl: "https://github.com/nikhila-mateti/InterviewBot",
-        features: [
-          "RAG-based chatbot with semantic graph search",
-          "Graph data ingestion and Cypher query execution",
-          "LLM-augmented responses via LangChain and OpenAI",
-          "Custom retrievers over VectorStoreIndex",
-          "Contextual conversation over structured knowledge"
-        ]
-      },
-      {
-        title: "Airline Reservation System",
-        description: "Domestic flight booking platform with seat selection, secure payments, and automated ticketing for Indian routes.",
-        tech: ["Angular", "Node.js", "Spring", "PostgreSQL", "JavaScript", "HTML", "CSS"],
-        icon: Plane,
-        color: "from-purple-500 to-pink-500",
-        githubUrl: "https://github.com/nikhila-mateti/AirlineReservations",
-        features: [
-          "Visual seat selection with real-time availability",
-          "Secure payment gateway integration",
-          "Automated PDF ticket generation & email delivery",
-          "Route-based flight search",
-          "Redundancy-free booking experience"
-        ]
-      },
-      {
-        title: "Eye Protection Mode",
-        description: "Real-time webcam monitoring script that detects if a user is too close to the screen and locks the workstation to promote eye safety.",
-        tech: ["Python", "OpenCV", "NumPy"],
-        icon: Eye,
-        color: "from-purple-500 to-pink-500",
-        githubUrl: "https://github.com/nikhila-mateti/Eye_Protection_Mode",
-        features: [
-          "Real-time face detection using webcam",
-          "Distance estimation from face height in pixels",
-          "Automatic workstation lock if too close",
-          "Lightweight and easy to run locally"
-        ]
-      },
-      {
-        title: "Customer Churn MLOps",
-        description: "End-to-end churn prediction pipeline with CI/CD, automated retraining, and cloud deployment using MLOps best practices.",
-        tech: ["XGBoost", "MLflow", "Docker", "Flask", "AWS", "Terraform", "Airflow", "PostgreSQL", "Grafana"],
-        icon: Server,
-        color: "from-purple-500 to-pink-500",
-        // githubUrl: "https://github.com/yourusername/customer-churn-mlops",
-        features: [
-          "Model versioning & registry with MLflow",
-          "CI/CD via GitHub Actions & Docker",
-          "Scheduled retraining with Airflow",
-          "Infrastructure as Code using Terraform",
-          "Performance monitoring with Grafana"
-        ]
-      },
-      {
-        title: "Precipitation Quest",
-        description: "Point-and-click educational game that teaches students how to identify precipitate reactions using a solubility chart.",
-        tech: ["Godot 4", "Piskel", "Firebase"],
-        icon: Gamepad,
-        color: "from-purple-500 to-pink-500",
-        githubUrl: "https://github.com/SaiUjwal296/Precipitation",
-        features: [
-          "Interactive gameplay with chemistry-based puzzles",
-          "Multiple difficulty levels for progressive learning",
-          "Playable via itch.io or standalone installables"
-        ]
-      },
-      
-    
-  ];
-
+const Projects = () => {
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.8 }}
-      className="min-h-screen flex items-center justify-center px-6 py-20"
-    >
-      <div className="max-w-7xl mx-auto">
+    <section id="projects" className="pf-section">
+      <div className="pf-container">
         <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center mb-16"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.45 }}
+          className="mb-7 flex items-baseline gap-3.5"
         >
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              My Projects
-            </span>
-          </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            A showcase of my technical expertise through various projects spanning 
-            web development, data analysis, and software engineering.
-          </p>
+          <span className="pf-mono text-[13px] tracking-wider text-fog">04</span>
+          <h2 className="pf-display text-[clamp(24px,3vw,30px)] m-0">Projects</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => {
-            const Icon = project.icon;
-            return (
-              <motion.div
-                key={index}
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
-                className="group relative"
-              >
-                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-500 h-full">
-                  <div className="flex items-start justify-between mb-6">
-                    <div className={`bg-gradient-to-br ${project.color} w-16 h-16 rounded-xl flex items-center justify-center`}>
-                      <Icon size={28} className="text-white" />
-                    </div>
-                    <div className="flex gap-3">
-                      <motion.a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 bg-white/10 rounded-lg text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-300"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <Github size={20} />
-                      </motion.a>
-                      {/* <motion.button
-                        className="p-2 bg-white/10 rounded-lg text-gray-400 hover:text-white hover:bg-white/20 transition-all duration-300"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <ExternalLink size={20} />
-                      </motion.button> */}
-                    </div>
-                  </div>
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-1">
+          {projects.map((project, index) => (
+            <motion.article
+              key={project.title}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-20px' }}
+              transition={{ duration: 0.45, delay: index * 0.05 }}
+              className="border-t border-chalk pt-7 first:border-t-0 first:pt-0"
+            >
+              <div className="flex items-start justify-between gap-3">
+                <span className="pf-mono text-[12px] tracking-wider text-fog">{project.number}</span>
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="pf-link"
+                    aria-label={`Open ${project.title} on GitHub`}
+                  >
+                    <ExternalLink size={14} strokeWidth={2} />
+                  </a>
+                )}
+              </div>
 
-                  <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
-                  <p className="text-gray-400 mb-6 leading-relaxed">{project.description}</p>
+              <h3 className="pf-display m-0 mt-3.5 text-[20px] leading-snug">{project.title}</h3>
 
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-purple-300 mb-3">Key Features</h4>
-                    <ul className="space-y-2">
-                      {project.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="text-gray-400 text-sm flex items-center">
-                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech, techIndex) => (
+              {project.bullets.length > 0 ? (
+                <ul className="mt-3 flex list-none flex-col gap-2 p-0">
+                  {project.bullets.map((bullet) => (
+                    <li
+                      key={bullet.slice(0, 48)}
+                      className="flex gap-3 text-[15px] leading-relaxed text-cinder"
+                    >
                       <span
-                        key={techIndex}
-                        className="px-3 py-1 bg-white/10 rounded-full text-xs text-gray-300 border border-white/20"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
+                        aria-hidden="true"
+                        className="mt-2 h-[5px] w-[5px] shrink-0 rounded-full bg-fog"
+                      />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="m-0 mt-2.5 text-[15px] leading-relaxed text-gravel">
+                  {project.description}
+                </p>
+              )}
 
-        <motion.div
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1 }}
-          className="text-center mt-16"
-        >
-          {/* <motion.button
-            className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            View All Projects
-          </motion.button> */}
-        </motion.div>
+              <div className="mt-4 flex flex-wrap gap-1.5">
+                {project.tech.map((tag) => (
+                  <span key={tag} className="pf-tag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </motion.article>
+          ))}
+        </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

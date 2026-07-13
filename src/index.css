@@ -1,9 +1,67 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: url('/public/background.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  margin: 0;
+  min-height: 100vh;
+  background: #fdfcfc;
+  color: #000;
+  font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.1px;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #ff4704;
+  color: #fff;
+}
+
+@layer components {
+  .pf-container {
+    @apply mx-auto w-full max-w-[720px] px-5 sm:px-8;
+  }
+
+  .pf-section {
+    @apply py-14 sm:py-16;
+  }
+
+  .pf-rule {
+    @apply h-px w-full bg-chalk;
+  }
+
+  .pf-display {
+    @apply font-display font-normal tracking-display text-obsidian;
+    line-height: 1.05;
+  }
+
+  .pf-mono {
+    @apply font-mono font-normal;
+  }
+
+  .pf-tag {
+    @apply inline-flex items-center rounded-md border border-chalk bg-white px-2.5 py-1 text-[12.5px] text-cinder;
+  }
+
+  .pf-link {
+    @apply inline-flex items-center gap-1.5 text-[14px] text-gravel no-underline transition-colors hover:text-obsidian;
+  }
+
+  .pf-pill {
+    @apply inline-flex h-9 items-center justify-center rounded-full border border-chalk bg-obsidian px-4 text-[14px] font-medium text-eggshell no-underline transition-opacity hover:opacity-90;
+  }
+
+  .pf-pill-ghost {
+    @apply inline-flex h-9 items-center justify-center rounded-full border border-chalk bg-white px-3 text-[14px] font-medium text-obsidian no-underline transition-colors hover:bg-powder;
+  }
 }

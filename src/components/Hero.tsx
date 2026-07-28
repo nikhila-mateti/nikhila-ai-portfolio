@@ -43,15 +43,17 @@ const Hero = () => {
             <MapPin size={14} strokeWidth={2} />
             {profile.location}
           </span>
-          <a
-            href={profile.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="pf-link"
-          >
-            <Linkedin size={14} strokeWidth={2} />
-            LinkedIn
-          </a>
+          {profile.linkedin ? (
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pf-link"
+            >
+              <Linkedin size={14} strokeWidth={2} />
+              LinkedIn
+            </a>
+          ) : null}
           <a
             href={profile.github}
             target="_blank"

@@ -12,7 +12,7 @@ const Education = () => {
           transition={{ duration: 0.45 }}
           className="mb-7 flex items-baseline gap-3.5"
         >
-          <span className="pf-mono text-[13px] tracking-wider text-fog">01</span>
+          <span className="pf-mono text-[13px] tracking-wider text-fog">04</span>
           <h2 className="pf-display text-[clamp(24px,3vw,30px)] m-0">Education</h2>
         </motion.div>
 

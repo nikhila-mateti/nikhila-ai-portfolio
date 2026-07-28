@@ -7,10 +7,10 @@ import Projects from './components/Projects';
 import Footer from './components/Footer';
 
 const navItems = [
-  { href: '#education', label: 'Education' },
   { href: '#skills', label: 'Skills' },
   { href: '#experience', label: 'Experience' },
   { href: '#projects', label: 'Projects' },
+  { href: '#education', label: 'Education' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -53,10 +53,6 @@ function App() {
         <div className="pf-container">
           <div className="pf-rule" />
         </div>
-        <Education />
-        <div className="pf-container">
-          <div className="pf-rule" />
-        </div>
         <Skills />
         <div className="pf-container">
           <div className="pf-rule" />
@@ -66,6 +62,10 @@ function App() {
           <div className="pf-rule" />
         </div>
         <Projects />
+        <div className="pf-container">
+          <div className="pf-rule" />
+        </div>
+        <Education />
         <Footer />
       </main>
     </div>

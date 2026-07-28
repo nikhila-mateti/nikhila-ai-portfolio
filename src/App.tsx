@@ -5,6 +5,7 @@ import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import { profile } from './data/profile';
 
 const navItems = [
   { href: '#skills', label: 'Skills' },
@@ -42,7 +43,7 @@ function App() {
               </a>
             ))}
           </div>
-          <a href="/Nikhila_Mateti_Resume.pdf" download className="pf-pill-ghost text-[13px]">
+          <a href={profile.resumeUrl} download className="pf-pill-ghost text-[13px]">
             Resume
           </a>
         </div>

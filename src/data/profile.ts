@@ -16,7 +16,7 @@ export const profile: Profile = {
   location: 'Sunnyvale, California, United States',
   email: 'nikhilasree636@gmail.com',
   phone: '+1 430-262-8690',
-  resumeUrl: '/Nikhila_Mateti_Resume.pdf',
+  resumeUrl: '/Nikhila_Sree_Resume.pdf',
   github: 'https://github.com/nikhila-mateti',
   bio: 'AI Engineer with 3+ years of software engineering experience building production GenAI systems, agent workflows, RAG pipelines, model evaluations, and backend services. Shipped AI applications handling thousands of weekly requests, improved retrieval accuracy to 89%, reduced p95 latency by 43%, and automated workflows that previously required hours of manual work.',
 };
